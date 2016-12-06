@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- 
+  Melkis Espinal, Christian DeGenova, Reed Arnold
+  SER 340
+  Prof. Ruby
+  Milestone 4
+-->
+<html >
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="images/plate.png"/>
+  <title>Match Munchies: Admin Login</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Delius+Unicase" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+</head>
+
+<body>
+  <h1 class="centeredTitle"> <img src="images/plate.png" width="75" height="75" id="title" alt="logo">Match Munchies</h1>
+  <div class="login">
+  	<p>Administrator Login</p>
+      <form method="post" action="adminPortal.html">
+      	<input type="text" name="u" placeholder="Admin Username" required="required" />
+          <input type="password" name="p" placeholder="Password" required="required" />
+          <button type="submit" class="btn btn-primary btn-block btn-large">Log In.</button>
+      </form>
+  		<a href="resetPassword.html" id="reset">Lost your password?</a>
+  </div>
+</body>
+</html>

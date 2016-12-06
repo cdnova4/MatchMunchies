@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!-- 
+  Melkis Espinal, Christian DeGenova, Reed Arnold
+  SER 340
+  Prof. Ruby
+  Milestone 4
+-->
+<html >
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="images/plate.png"/>
+  <title>Match Munchies: Admin Login</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Delius+Unicase" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+</head>
+
+<body>
+  <div><a class="logOut" href="adminLogin.html" id="reset">Log Out</a></div>
+  
+  <h1 class="centeredTitle"> <img src="images/plate.png" width="75" height="75" id="title" alt="logo">Match Munchies</h1>
+  <div class="container">
+    <ul class="nav nav-tabs nav-justified">
+      <li class="active"><a data-toggle="tab" href="#transactions">Transactions</a></li>
+      <li><a data-toggle="tab" href="#users">Users</a></li>
+    </ul>    
+
+    <div class="tab-content">
+      <div id="transactions" class="tab-pane fade in active">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Seller</th>
+              <th>Buyer</th>
+              <th>Amount</th>
+              <th>Status</th>
+              <th>Date</th>
+              <th>Ratings</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jane Smith</td>
+              <td>John Smith</td>
+              <td>$500.00</td>
+              <td>Completed</td>
+              <td>11/25/15</td>
+              <td>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>Jane Smith</td>
+              <td>John Smith</td>
+              <td>$300.00</td>
+              <td>Completed</td>
+              <td>04/01/15</td>
+              <td>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+      <div id="users" class="tab-pane fade">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Select</th>
+              <th>Picture</th>
+              <th>Name</th>
+              <th>User Type</th>
+              <th>Ratings</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="checkbox"><label><input type="checkbox" class="checkBox" id="jane"></label></div>
+              </td>
+              <td><img src="images/placeholder.jpg" height="50" width="50" alt="placeholder"></td>
+              <td>Jane Smith</td>
+              <td>Seller</td>
+              <td>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+              </td>
+              <td id="janeStatus">Unblocked</td>
+              
+            </tr>
+            <tr>
+              <td>
+                <div class="checkbox"><label><input type="checkbox" class="checkBox" id="john"></label></div>
+              </td>
+              <td><img src="images/placeholder.jpg" height="50" width="50" alt="placeholder"></td>
+              <td>John Smith</td>
+              <td>Buyer</td>
+              <td>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+              </td>
+              <td id="johnStatus">Blocked</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary" onclick="unblock()">Unblock</button>
+          <button type="button" class="btn btn-danger" onclick="block()">Block</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function unblock(){
+      var janeBox = document.getElementById('jane');
+      var janeStatus = document.getElementById('janeStatus');
+      var johnBox = document.getElementById('john');
+      var johnStatus = document.getElementById('johnStatus');
+
+      if(janeBox.checked){
+        janeStatus.innerHTML = "Unblocked";
+        janeBox.checked = false;
+      }
+      if(johnBox.checked){
+        johnStatus.innerHTML = "Unblocked";
+        johnBox.checked = false;
+      }
+    }
+    function block(){
+      var janeBox = document.getElementById('jane');
+      var janeStatus = document.getElementById('janeStatus');
+      var johnBox = document.getElementById('john');
+      var johnStatus = document.getElementById('johnStatus');
+
+      if(janeBox.checked){
+        janeStatus.innerHTML = "Blocked";
+        janeBox.checked = false;
+      }
+      if(johnBox.checked){
+        johnStatus.innerHTML = "Blocked";
+        johnBox.checked = false;
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<!-- 
+  Melkis Espinal, Christian DeGenova, Reed Arnold
+  SER 340
+  Prof. Ruby
+  Milestone 4
+-->
+<html >
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="images/plate.png"/>
+  <title>Match Munchies: Admin Login</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Delius+Unicase" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar transparent navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="userProfile.html">
+          <div>
+            <img src="images/plate.png" width="20" height="20" id="title" alt="logo"> Match Munchies
+          </div>
+        </a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="">Profile</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+      <form class="navbar-form navbar-right" action="search_list.html">
+        <div class="form-group">
+          <input type="text" placeholder="Search Friends" required="required"/>
+        </div>
+      </form>
+    </div>
+    <div><a class="logOut" href="login.html" id="reset">Log Out</a></div>
+    <div class="notification">
+      <ul class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-microphone"></i> Notifications</a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#"><span class="label label-primary">7:00 AM</span> <b>Jane Smith</b> Friend Request</a>
+            <button type="button" class="btn btn-primary btn-block btn-sm" onclick="">Accept</button>
+            <button type="button" class="btn btn-danger btn-block btn-sm" onclick="">Reject</button>
+          </li>
+          <li role="presentation" class="divider"></li>
+          <li>
+            <a href="#"><span class="label label-primary">8:00 AM</span> <b>John Doe</b> Requested $300.00</a>
+            <button type="button" class="btn btn-primary btn-block btn-sm" onclick="">Accept</button>
+            <button type="button" class="btn btn-danger btn-block btn-sm" onclick="">Reject</button>
+          </li>
+          <li role="presentation" class="divider"></li>
+          <li><a href="#" class="text-center">View All</a></li>
+        </ul>
+       </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <ul class="nav nav-tabs nav-justified">
+      <li class="active"><a data-toggle="tab" href="#overview">Overview</a></li>
+      <li><a data-toggle="tab" href="#friends">Friends</a></li>
+      <li><a data-toggle="tab" href="#account">Account</a></li>
+    </ul>    
+
+    <div class="tab-content">
+      <div id="overview" class="tab-pane fade in active">
+        <div class="container-fluid">
+          <div class="col-md-2">
+            <div class="top-space">
+              <img src="images/placeholder.jpg" height="150" width="150" alt="placeholder">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="top-space">
+              <h3 id="name">John Smith<small> john.smith@quinnipiac.edu</small></h3>
+              <b>QU ID#:</b> 0123456 <br>
+              <div id="phone"><b>Phone#:</b> 555-555-5555</div>
+              <div id="userType"><b>User Type:</b> Buyer</div>
+            </div>
+          </div>
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Transaction Type</th>
+              <th>Amount</th>
+              <th>Status</th>
+              <th>Date</th>
+              <th>Ratings</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jane Smith</td>
+              <td>Bought</td>
+              <td>$400.00</td>
+              <td>Completed</td>
+              <td>04/25/16</td>
+              <td>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>Jane Smith</td>
+              <td>Bought</td>
+              <td>$500.00</td>
+              <td>Completed</td>
+              <td>11/25/15</td>
+              <td>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>Jane Smith</td>
+              <td>Bought</td>
+              <td>$300.00</td>
+              <td>Completed</td>
+              <td>04/01/15</td>
+              <td>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="friends" class="tab-pane fade">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Picture</th>
+              <th>Name</th>
+              <th>User Type</th>
+              <th>Amount to request</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="images/placeholder.jpg" height="50" width="50" alt="placeholder"></td>
+              <td>Jane Smith</td>
+              <td>Seller</td>
+              <td>
+                <div class="input-group">
+                  <input type="number" placeholder="Amount" required="required" />
+                </div>
+              </td>
+              <td><button id="janeButton" type="submit" class="btn btn-primary btn-block btn-large" onclick="changeJane()">Block</button></td>
+              
+            </tr>
+            <tr>
+              <td><img src="images/placeholder.jpg" height="50" width="50" alt="placeholder"></td>
+              <td>John Smith</td>
+              <td>Buyer</td>
+              <td>N/A</td>
+              <td><button id="johnButton" type="submit" class="btn btn-primary btn-block btn-large" onclick="changeJohn()">Block</button></td>
+            </tr>
+          </tbody>
+        </table> 
+      </div>
+
+      <div id="account" class="tab-pane fade">
+        <div class="top-space">
+          <div class="col-md-6">
+            QU ID#:
+            <input type="text" value="0123456" disabled />
+            First Name:
+            <input id="fnameInput" type="text" value="John"/>
+            Phone#:
+            <input id="phoneInput" type="text" value="555-555-5555"/>
+            Update Image:
+            <input type='file'/>
+          </div>
+        </div>
+        <div class="col-md-6">
+          QU Email:
+          <input type="text" value="john.smith@quinnipiac.edu" disabled />
+          Last Name:
+          <input id="lnameInput" type="text" value="Smith"/>
+          User Type:
+          <form>
+            <input id="sellerRadio" type="radio" name="gender" value="male" checked> Meal Plan Seller<br>
+            <input id="buyerRadio" type="radio" name="gender" value="female"> Meal Plan Buyer<br>
+          </form>
+        </div>
+        <div class="col-md-12">
+          <button type="submit" class="btn btn-primary btn-block btn-large" onclick="update()">Update Account</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script type="text/javascript">
+      function changeJane(){
+        var janeButton = document.getElementById('janeButton');
+
+        if(janeButton.firstChild.data == "Block"){
+          janeButton.firstChild.data = "Unblock"
+        } 
+        else{
+          janeButton.firstChild.data = "Block"
+        }
+      }
+      function changeJohn(){
+        var johnButton = document.getElementById('johnButton');
+
+        if(johnButton.firstChild.data == "Block"){
+          johnButton.firstChild.data = "Unblock"
+        } 
+        else{
+          johnButton.firstChild.data = "Block"
+        }
+      }
+      function update(){
+        var name = document.getElementById('name');
+        var fname = document.getElementById('fnameInput');
+        var lname = document.getElementById('lnameInput');
+        var phoneOriginal = document.getElementById('phone');
+        var phoneNew = document.getElementById('phoneInput');
+        var sellerRadio = document.getElementById('sellerRadio');
+        var buyerRadio = document.getElementById('buyerRadio');
+        var userType = document.getElementById('userType');
+
+        name.innerHTML = fname.value + " " + lname.value + " <small>john.smith@quinnipiac.edu</small>";
+        phoneOriginal.innerHTML = "<b>Phone#:</b> " + phoneNew.value;
+
+        if(sellerRadio.checked){
+          userType.innerHTML = "<b>User Type:</b> Seller";
+        }
+
+        if(buyerRadio.checked){
+          userType.innerHTML = "<b>User Type:</b> Buyer";
+        }
+      }
+    </script>
+</body>
+</html>

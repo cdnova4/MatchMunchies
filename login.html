@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<!-- 
+  Melkis Espinal, Christian DeGenova, Reed Arnold
+  SER 340
+  Prof. Ruby
+  Milestone 4
+-->
+<html >
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="images/plate.png"/>
+  <title>Match Munchies: Buying and Selling QU Meal Plan Money Made Easy</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Delius+Unicase" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+</head>
+
+<body>
+  <div class="grid">
+    <div><a class="logOut" href="adminLogin.html">Admin</a></div>
+    <h1 class="centeredTitle"> <img src="images/plate.png" width="75" height="75" id="title" alt="logo">Match Munchies</h1>
+    
+    <div class="login">
+    	<p>Buying and Selling QU Meal Plan Money Made Easy</p>
+      <form method="post" action="userProfile.html">
+        <input type="text" name="u" placeholder="QU Email" required="required" />
+        <input type="password" name="p" placeholder="Password" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Log In.</button>
+      </form>
+      
+    	<a id="forgotPass" href="resetPassword.html">Lost your password?  </a>
+    	<a id="registerLink" href="newAccount.html"> Register New Account</a>
+    </div>
+  </div>
+</body>
+</html>

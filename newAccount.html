@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- 
+  Melkis Espinal, Christian DeGenova, Reed Arnold
+  SER 340
+  Prof. Ruby
+  Milestone 4
+-->
+<html >
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="images/plate.png"/>
+  <title>Match Munchies: Register New Account</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Delius+Unicase" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+</head>
+
+<body>
+  <div><a class="logOut" href="adminLogin.html" id="reset">Admin</a></div>
+  <h1 class="centeredTitle"> <img src="images/plate.png" width="75" height="75" id="title" alt="logo">Match Munchies</h1>
+
+  <div class="login">
+    <p>Fill out the fields below to register your New Account</p>
+    <form id="option" method="post" action="login.html">
+      <input id="fn" type="text" name="fn" placeholder="First Name" required="required"/>
+      <input id="ln" type="text" name="ln" placeholder="Last Name" required="required"/>
+      <input type='file' id="imgInp"/>
+      
+      <input type="text" name="pn" placeholder="Phone Number" required="required"/>
+      <input type="text" name="quid" placeholder="QU ID" required="required"/>
+      <input type="text" name="email" placeholder="QU Email" required="required"/>
+      <input type="password" name="p" placeholder="Password" required="required"/>
+      <input type="password" name="cp" placeholder="Confirm Password" required="required"/>
+      <button id="registerButton" type="submit" class="btn btn-primary btn-block btn-large">Register</button>
+    </form>			
+  </div>
+</body>
+</html>
